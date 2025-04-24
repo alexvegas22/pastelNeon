@@ -1,56 +1,63 @@
 @import url('https://fonts.googleapis.com/css?family=Syne%20Mono:700|Syne%20Mono:400');
-
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 @media (prefers-color-scheme: light) {
-  :root {
-    --text: #16091b;
-    --background: #ede4f6;
-    --primary: #54296b;
-    --secondary: #d289c1;
-    --accent: #aa417c;
-  }
+    :root {
+	--text: #16091b;
+	--background: #ede4f6;
+	--primary: #54296b;
+	--secondary: #d289c1;
+	--accent: #aa417c;
+    }
 }
 @media (prefers-color-scheme: dark) {
-  :root {
-    --text: #f1e4f6;
-    --background: #12091b;
-    --primary: #bf94d6;
-    --secondary: #762d65;
-    --accent: #be5591;
-  }
+    :root {
+	--text: #f1e4f6;
+	--background: #12091b;
+	--primary: #bf94d6;
+	--secondary: #762d65;
+	--accent: #be5591;
+    }
 }
 
 body {
-  font-family: 'Syne Mono';
-  font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    font-family: 'Syne';
+    font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, div, button, input {
-  font-family: 'Syne Mono';
-  font-weight: 700;
+p {
+    font-size: 18px;
 }
 
-html {font-size: 100%;} /* 16px */
+h1, h2, h3, h4, h5, button, input {
+    font-family: 'Syne Mono';
+    font-weight: 700;
+}
 
-h1 {font-size: 4.210rem; /* 67.36px */}
+h1 {font-size: 32px;}
 
-h2 {font-size: 3.158rem; /* 50.56px */}
+h2 {
+    font-size: 24px;
+    margin-top: 16px;
+}
 
-h3 {font-size: 2.369rem; /* 37.92px */}
+h3 {font-size: 20px;}
 
-h4 {font-size: 1.777rem; /* 28.48px */}
+h4 {font-size: 18px;}
 
-h5 {font-size: 1.333rem; /* 21.28px */}
+h5 {font-size: 16px;}
 
-small {font-size: 0.750rem; /* 12px */}
+small {font-size: 14px;}
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
 }
-
 
 body {
     caret-color: var(--text);
@@ -75,15 +82,14 @@ body {
 }
 
 button{
-
     border : 3px dashed var(--primary);
     outline : none;
     color: var(--text);
     padding : 10px;
     border-radius : 5px;
     transition:
-    color 0.5s,
-    filter 0.5s;
+	color 0.5s,
+	filter 0.5s;
     background: transparent;
     cursor: pointer;
 }
@@ -102,16 +108,16 @@ a{
 }
 
 select{
- width: 100%;
-        padding: 8px;
-        margin-bottom: 10px; /* Adjust the spacing if needed */
-        display: block; /* Display the select input on smaller screens */
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px; /* Adjust the spacing if needed */
+    display: block; /* Display the select input on smaller screens */
 
-        /* Styling with custom colors */
-        background-color: var(--primary);
-        color: var(--text);
-        border: 1px solid var(--text);
-        border-radius: 5px;
+    /* Styling with custom colors */
+    background-color: var(--primary);
+    color: var(--text);
+    border: 1px solid var(--text);
+    border-radius: 5px;
 }
 
 input {
@@ -154,40 +160,60 @@ input {
     }
 }
 .site-header {
-  position: absolute;
-  width: 1440px;
-  height: 100px;
-  left: 0;
-  top: 0;
-  background: #242222;
+    width: full;
+    height: 100px;
 }
 
 .header-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .header-content {
     display: flex;
     flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
 }
 
 .site-title {
-  color: white;
-  margin: 0;
+    color: white;
+    margin: 0;
 }
 
 .nav-menu {
-  display: flex;
-  gap: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
 }
 
 .nav-link {
-  color: white;
-  text-decoration: none;
+    color: white;
+}
+
+main {
+    margin: 0 48px 0 48px;
+    text-align:justify;
+    text-justify: inter-word;
+}
+
+footer {
+    width: 100%;
+    background: var(--secondary);
+    padding: 8px 16px 8px 16px;
+    text-align: center;
+    align-self: center;
+    justify-content: end;
+    margin-top: auto;
+}
+
+.postTitle {
+    display: flex;
+    flex-align: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    border-bottom: 2px solid var(--primary);
 }
